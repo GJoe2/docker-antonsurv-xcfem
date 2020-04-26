@@ -32,7 +32,7 @@ cmake ../xc_utils/src && \
 make -j 2 && \
 make install && \
 cd $base_dir/xc_utils/python_modules  && \
-sh local_install.sh && \
+bash ./local_install.sh && \
 
 # build  XC
 cd $base_dir && \
