@@ -54,7 +54,7 @@ cd $base_dir/xc/verif && \
 bash ./run_verif.sh && \
 
 #WORKDIR /data
-#VOLUME ["/data"]
+VOLUME ["/data"]
 ENTRYPOINT ["python"]
 
  
