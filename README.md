@@ -9,7 +9,7 @@ You can run xcfem or bash in the container.
 # User Guidelines:
 First, install docker on your platform. See https://docs.docker.com/install/
 
-Then, Change directory (cd) to your working directory, where .yy files are located
+Then, Change directory (cd) to your working directory, where .py files are located
 
 To run a .py file, type in your terminal:
 
