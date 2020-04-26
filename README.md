@@ -1,9 +1,9 @@
 # Docker Image antonsurv/xcfem
 
-This is an xcfem docker image, built on Ubuntu 18.04 Linux System.
+This is an xcfem (https://github.com/xcfem/xc.git) docker image, built on Ubuntu 18.04 Linux System.
 
 # Feature
-You can run xcfem or bash in the container.
+You can run xcfem (https://github.com/xcfem/xc.git) or bash in the container.
 
 # User Guidelines:
 First, install docker on your platform. See https://docs.docker.com/install/
