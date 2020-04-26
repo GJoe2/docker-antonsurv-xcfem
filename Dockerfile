@@ -50,11 +50,11 @@ bash ./local_install.sh && \
 cd $base_dir/xc_utils/verif && \
 bash ./run_verif.sh && \
 
-#cd $base_dir/xc/verif && \
+cd $base_dir/xc/verif && \
 bash ./run_verif.sh && \
 
-WORKDIR /data
-VOLUME ["/data"]
-CMD ["python"]
+#WORKDIR /data
+#VOLUME ["/data"]
+ENTRYPOINT ["python"]
 
  
