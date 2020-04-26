@@ -1,5 +1,4 @@
-# xcfem
-Docker Image antonsurv/xcfem
+# Docker Image antonsurv/xcfem
 
 This is an xcfem docker image, built on Ubuntu 18.04 Linux System.
 
