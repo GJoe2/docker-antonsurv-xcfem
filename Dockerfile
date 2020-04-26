@@ -42,14 +42,14 @@ cmake ../xc/src && \
 make -j 2 && \
 make install && \
 cd $base_dir/xc/python_modules && \
-sh local_install.sh && \
+bash ./local_install.sh && \
 
 # run unit tests
 cd $base_dir/xc_utils/verif && \
-sh run_verif.sh && \
+bash ./run_verif.sh && \
 
 cd $base_dir/xc/verif && \
-sh run_verif.sh && \
+bash ./run_verif.sh && \
 
 WORKDIR /data
 VOLUME ["/data"]
