@@ -16,9 +16,14 @@ To run a ```.py``` file, type in your terminal:
 docker run --rm -v $(pwd):/data antonsurv/xcfem python xxxx.py
 ```
 Note:
+
 ```--rm```: remove the container after execution finishes.
-```-v```: mount your current directory (pwd) to /data (the default working space)
+
+```-v```: mount your current directory (```pwd```) to /data (the default working space)
+
 ```antonsurv/xcfem```: this image.
+
 ```python xxxx.py```: your command.
+
 
 Now, please enjoy :)
