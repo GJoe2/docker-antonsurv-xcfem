@@ -12,13 +12,13 @@ Then, Change directory (```cd```) to your working directory, where ```.py``` fil
 
 To run a ```.py``` file, type in your terminal:
 ```
-docker run --rm -v $(pwd):/data antonsurv/xcfem python xxxx.py
+docker run --rm -v $(pwd):/home/docker antonsurv/xcfem python xxxx.py
 ```
 Note:
 
 ```--rm```: remove the container after execution finishes.
 
-```-v```: mount your current directory (```pwd```) to /data (the default working space)
+```-v```: mount your current directory (```pwd```) to /home/docker (the default working space)
 
 ```antonsurv/xcfem```: this image.
 
