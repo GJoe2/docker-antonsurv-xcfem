@@ -55,8 +55,9 @@ bash ./run_verif.sh && \
 
 cd /home/docker
 
-WORKDIR /home/docker
+#WORKDIR /home/docker
 VOLUME ["/home/docker"]
-ENTRYPOINT ["python"]
+#ENTRYPOINT ["python"]
+CMD ["bin/bash"]
 
  
