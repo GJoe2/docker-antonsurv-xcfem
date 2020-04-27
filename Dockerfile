@@ -57,7 +57,7 @@ cd /home && \
 mkdir /home/data && \
 cd /home/data && \
 
-WORKDIR /home/data
+#WORKDIR /home/data
 #ENV PATH $PATH:/home/data
 VOLUME ["/home"]
 ENTRYPOINT ["python"]
