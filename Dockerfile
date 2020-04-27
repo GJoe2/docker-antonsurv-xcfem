@@ -54,10 +54,12 @@ cd $base_dir/xc/verif && \
 bash ./run_verif.sh && \
 
 cd /home && \
+mkdir /home/data && \
+cd /home/data && \
 
-WORKDIR /data
-ENV PATH $PATH:/home
-VOLUME ["/data"]
+WORKDIR /home/data
+ENV PATH $PATH:/home/data
+VOLUME ["/home/data"]
 ENTRYPOINT ["python"]
 
  
