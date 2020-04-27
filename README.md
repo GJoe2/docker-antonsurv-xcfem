@@ -10,6 +10,7 @@ First, install docker on your platform. See https://docs.docker.com/install/
 
 Enter the docker environment:
 run command ```docker run -it antonsurv/xcfem```
+
 Example usage:
 ```
 [antman@my-pc]$ docker run -it antonsurv/xcfem
