@@ -3,7 +3,7 @@ ENV TAG v.1.0
 ENV DEBIAN_FRONTEND=noniteractive
 RUN apt-get update && apt-get install -y sudo wget bash cmake make git gcc g++ gfortran libboost-all-dev && \
 useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo && \
-#USER docker
+
 cd /home/docker && \
 
 apt-get install -y libarpack2-dev libarpack++2-dev libcgal-dev libdb-dev libf2c2-dev libglib2.0-dev libgmp3-dev libgtk2.0-dev libgtkgl2.0-dev libgtkglextmm-x11-1.2-dev libgtkmm-2.4-dev libgts-bin libgts-dev liblapack-dev libmpfr-dev libmysql++-dev libplot-dev libsqlite3-dev libsuperlu-dev libsuitesparse-dev libvtk6-dev libx11-dev libmetis-dev && \
@@ -53,7 +53,9 @@ bash ./run_verif.sh && \
 
 cd /home/docker
 
+USER docker
 #WORKDIR /home/docker
+ENV HOME /home/docker
 VOLUME ["/home/docker"]
 #ENTRYPOINT ["python"]
 CMD ["bin/bash"]
