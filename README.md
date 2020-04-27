@@ -18,7 +18,7 @@ Note:
 
 ```--rm```: remove the container after execution finishes.
 
-```-v```: mount your current directory (```pwd```) to /home/docker (the default working space)
+```-v```: mount your current directory (```pwd```) to ```/home/docker``` (the default working space)
 
 ```antonsurv/xcfem```: this image.
 
