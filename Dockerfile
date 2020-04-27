@@ -53,7 +53,10 @@ bash ./run_verif.sh && \
 cd $base_dir/xc/verif && \
 bash ./run_verif.sh && \
 
-#WORKDIR /data
+cd /home && \
+
+WORKDIR /data
+ENV PATH $PATH:/home
 VOLUME ["/data"]
 ENTRYPOINT ["python"]
 
