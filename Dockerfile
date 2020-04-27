@@ -59,6 +59,6 @@ USER docker
 ENV HOME /home/docker
 VOLUME ["/home/docker"]
 #ENTRYPOINT ["python"]
-CMD ["bin/bash" , "cd /home/docker"]
+CMD ["bin/bash"]
 
  
