@@ -22,7 +22,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag antonsurv/docker-xcfem:$(date +%s)
     - name: Push the tagged Docker image
-      run: docker push pjlamb12/angular-cli:${{steps.vars.outputs.tag}}
+      run: docker push antonsurv/docker-xcfem:${{steps.vars.outputs.tag}}
     - name: Build the latest Docker image
       run: docker build . --file Dockerfile --tag antonsurv/docker-xcfem:latest
     - name: Push the latest Docker image
