@@ -12,7 +12,7 @@ apt-get install -y python-vtk6 python-scipy python-sympy python-matplotlib pytho
 apt-get install -y gnuplot bc && \
 apt-get clean && \
 
-pip install mayavi ezdxf dxfwrite && \
+pip install mayavi ezdxf dxfwrite pycairo && \
 
 rm -rf build_xc && \
 mkdir build_xc && \
