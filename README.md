@@ -41,8 +41,9 @@ N= -10079.9983066
 ```
 
 # Future work:
+Accessing host directory:
 
-Then, Change directory (```cd```) to your working directory, where ```.py``` files are located
+TChange directory (```cd```) to your working directory, where ```.py``` files are located
 
 To run a ```.py``` file, type in your terminal:
 ```
