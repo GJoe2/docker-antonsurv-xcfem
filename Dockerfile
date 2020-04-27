@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+MAINTAINER anton surv (antsurv@protonmail.com)
 ENV TAG v.1.0
 ENV DEBIAN_FRONTEND=noniteractive
 RUN apt-get update && apt-get install -y sudo wget bash cmake make git gcc g++ gfortran libboost-all-dev && \
@@ -58,6 +59,6 @@ USER docker
 ENV HOME /home/docker
 VOLUME ["/home/docker"]
 #ENTRYPOINT ["python"]
-CMD ["bin/bash"]
+CMD ["bin/bash" , "cd /home/docker"]
 
  
