@@ -54,9 +54,9 @@ bash ./run_verif.sh && \
 
 cd /home/docker
 
-USER docker
+#USER docker
 #WORKDIR /home/docker
-ENV HOME /home/docker
+#ENV HOME /home/docker
 VOLUME ["/home/docker"]
 #ENTRYPOINT ["python"]
 CMD ["bin/bash"]
