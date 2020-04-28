@@ -17,6 +17,9 @@ Example usage:
 root@d818fba1fb71:/# cd /home/docker/
 root@d818fba1fb71:/home/docker# ls
 build_xc
+```
+Let's clone xc example  from https://github.com/xcfem/xc_examples.git
+```
 root@d818fba1fb71:/home/docker# git clone https://github.com/xcfem/xc_examples.git
 Cloning into 'xc_examples'...
 remote: Enumerating objects: 31, done.
@@ -25,6 +28,9 @@ remote: Compressing objects: 100% (27/27), done.
 remote: Total 324 (delta 11), reused 16 (delta 4), pack-reused 293
 Receiving objects: 100% (324/324), 3.83 MiB | 369.00 KiB/s, done.
 Resolving deltas: 100% (186/186), done.
+```
+Let's run ```tutorial_001_meshgen.py``` in the xc example folder:
+```
 root@d818fba1fb71:/home/docker# ls
 build_xc  xc_examples
 root@d818fba1fb71:/home/docker# cd xc_examples/
@@ -40,24 +46,25 @@ root@d818fba1fb71:/home/docker/xc_examples/XC_tutorial_001# python tutorial001_m
 N= -10079.9983066
 ```
 
-# Future work:
-Accessing host directory:
-
-Change directory (```cd```) to your working directory, where ```.py``` files are located
-
-To run a ```.py``` file, type in your terminal:
+Example 2 (copying file from host to docker container): 
+1. Open two terminal.  On the first terminal let's run ```docker run -it antonsurv/xcfem``` . 
+2. Open the second terminal run:```docker ps ```, and we get container id (example: ```d4ab1093e1dd```).
+3. Copy folder from host to container id with docker command:
+```docker cp $(pwd)/xc_examples d4ab1093e1dd:/home/docker``` 
+4. on the first terminal now we can run tutorial  2:
 ```
-docker run --rm -v $(pwd):/home/docker antonsurv/xcfem python xxxx.py
+root@d4ab1093e1dd:/home/docker/xc_examples/XC_tutorial_002# python tutorial002_script.py 
+stress=  1049999992.18
+tension=  2099.99998435
+eig1=  328431.494225
+eig2=  1294638.73225
+eig3=  2842469.26144
+f1=  91.2100155414
+f2=  181.089983669
+f3=  268.329252056
+ 
 ```
-Note:
-
-```--rm```: remove the container after execution finishes.
-
-```-v```: mount your current directory (```pwd```) to ```/home/docker``` (the default working space)
-
-```antonsurv/xcfem```: this image.
-
-```python xxxx.py```: your command.
-
+ 
+```
 
 Now, please enjoy :)
