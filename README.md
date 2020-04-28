@@ -51,7 +51,7 @@ Example 2 (copying file from host to docker container):
 2. Open the second terminal run:```docker ps ```, and we get container id (example: ```d4ab1093e1dd```).
 3. Copy folder from host to container id with docker command:
 ```docker cp $(pwd)/xc_examples d4ab1093e1dd:/home/docker``` 
-4. on the first terminal now we can run tutorial  2:
+4. On the first terminal now we can run tutorial  2:
 ```
 root@d4ab1093e1dd:/home/docker/xc_examples/XC_tutorial_002# python tutorial002_script.py 
 stress=  1049999992.18
