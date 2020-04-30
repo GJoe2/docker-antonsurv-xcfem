@@ -65,7 +65,7 @@ f3=  268.329252056
 ```
 - If you want persistent data, create volume (ex: ```myvol```) and attach/mount to ```/home/docker``` in container:
 ```
-$ docker create volume myvol
+$ docker create volume my-vol
 $ docker run -it -v my-vol:/home/docker antonsurv/xcfem
 ```
 
