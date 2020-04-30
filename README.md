@@ -8,7 +8,7 @@ You can run xcfem (https://github.com/xcfem/xc.git) or bash in the container.
 # User Guidelines:
 First, install docker on your platform. See https://docs.docker.com/install/
 
-Enter the docker environment:
+- Enter the docker environment:
 run command ```docker run -it antonsurv/xcfem```
 
 Example usage:
@@ -18,7 +18,7 @@ root@d818fba1fb71:/# cd /home/docker/
 root@d818fba1fb71:/home/docker# ls
 build_xc
 ```
-Let's clone xc example  from https://github.com/xcfem/xc_examples.git
+- Let's clone xc example  from https://github.com/xcfem/xc_examples.git
 ```
 root@d818fba1fb71:/home/docker# git clone https://github.com/xcfem/xc_examples.git
 Cloning into 'xc_examples'...
@@ -29,7 +29,7 @@ remote: Total 324 (delta 11), reused 16 (delta 4), pack-reused 293
 Receiving objects: 100% (324/324), 3.83 MiB | 369.00 KiB/s, done.
 Resolving deltas: 100% (186/186), done.
 ```
-Let's run ```tutorial_001_meshgen.py``` in the xc example folder:
+- Let's run ```tutorial_001_meshgen.py``` in the xc example folder:
 ```
 root@d818fba1fb71:/home/docker# ls
 build_xc  xc_examples
@@ -46,7 +46,7 @@ root@d818fba1fb71:/home/docker/xc_examples/XC_tutorial_001# python tutorial001_m
 N= -10079.9983066
 ```
 
-Example 2 (copying file from host to docker container): 
+- Example 2 (copying file from host to docker container): 
 1. Open two terminal.  On the first terminal let's run ```docker run -it antonsurv/xcfem``` . 
 2. Open the second terminal run:```docker ps ```, and we get container id (example: ```d4ab1093e1dd```).
 3. Copy folder from host to container id with docker command:
@@ -63,7 +63,12 @@ f1=  91.2100155414
 f2=  181.089983669
 f3=  268.329252056
 ```
+- If you want persistent data, create volume (ex: ```myvol```) and attach/mount to ```/home/docker``` in container:
+```
+$ docker create volume myvol
+$ docker run -it -v my-vol:/home/docker antonsurv/xcfem
+```
 
-If you need a graphical environment with Direct display using XAuth: Follow the step of this Youtube link https://www.youtube.com/watch?v=RDg6TRwiPtg. 
+- If you need a graphical environment with Direct display using XAuth: Follow the step of this Youtube link https://www.youtube.com/watch?v=RDg6TRwiPtg. 
 
 Now, please enjoy :)
