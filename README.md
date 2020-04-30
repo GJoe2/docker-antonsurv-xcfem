@@ -64,6 +64,6 @@ f2=  181.089983669
 f3=  268.329252056
 ```
 
-If you need graphical Environment with Direct display using XAuth: Follow this Youtube link https://www.youtube.com/watch?v=RDg6TRwiPtg. 
+If you need graphical environment with Direct display using XAuth: Follow the step of this Youtube link https://www.youtube.com/watch?v=RDg6TRwiPtg. 
 
 Now, please enjoy :)
