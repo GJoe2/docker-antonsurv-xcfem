@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
-MAINTAINER anton surv (antsurv@protonmail.com)
-ENV TAG v.1.0
+FROM ubuntu:20.04
+MAINTAINER gjoe
+ENV TAG v.1.1
 ENV DEBIAN_FRONTEND=noniteractive
 RUN apt-get update && apt-get install -y sudo wget bash cmake make git gcc g++ gfortran libboost-all-dev && \
 useradd -m docker && echo "docker:docker" | chpasswd && adduser docker sudo && \
